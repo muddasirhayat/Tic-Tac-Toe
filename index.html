@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <h1>Tic Tac Toe</h1>
+      <h2>Player's (X) AND (O) Welcome!</h2>
+      <div class="countainer">
+        <div class="btns">
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+        </div>
+      </div>
+
+      <button class="resetBtn">Restart Game</button>
+    </main>
+
+    <!-- Start Modal -->
+
+    <div class="startCountainer">
+      <div class="startModal">
+        <h2>Wecome to the MH Tic Tac Toe Game</h2>
+        <div class="playerInputs">
+          <label class="lForPX" for="playerX"
+            >PlayerX Name: <input  placeholder=" Default PlayerX" type="text" name="playerX" id="playerX"
+          /></label>
+          <label class="lForPO" for="playerO"
+            >PlayerO Name: <input placeholder=" Default PlayerO" type="text" name="playerO" id="playerO"
+          /></label>
+        </div>
+        <div class="gamebtns">
+          <button class="PVC">Play with AI</button>
+
+          <button type="submit" class="gameStartBtn">Game Start</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
