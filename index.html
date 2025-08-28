@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
   </head>
   <body>
+    <!-- ==================== Main Game Section ==================== -->
     <main class="main">
       <h1>Tic Tac Toe</h1>
       <h2>Player's (X) AND (O) Welcome!</h2>
-      <div class="countainer">
+      <div class="container">
         <div class="btns">
           <button class="box"></button>
           <button class="box"></button>
@@ -24,29 +25,60 @@
         </div>
       </div>
 
-      <button class="resetBtn">Restart Game</button>
+      <div class="gameRBtns">
+        <button class="resetBtn">Reset Game</button>
+        <button class="restartBtn">Restart Game</button>
+      </div>
     </main>
+    <!-- ==================== End Main Game Section ==================== -->
 
-    <!-- Start Modal -->
-
-    <div class="startCountainer">
+    <!-- ==================== Start Modal ==================== -->
+    <div class="startContainer">
       <div class="startModal">
-        <h2>Wecome to the MH Tic Tac Toe Game</h2>
         <div class="playerInputs">
-          <label class="lForPX" for="playerX"
-            >PlayerX Name: <input  placeholder=" Default PlayerX" type="text" name="playerX" id="playerX"
-          /></label>
-          <label class="lForPO" for="playerO"
-            >PlayerO Name: <input placeholder=" Default PlayerO" type="text" name="playerO" id="playerO"
-          /></label>
-        </div>
-        <div class="gamebtns">
-          <button class="PVC">Play with AI</button>
+          <label class="lForPX" for="playerX">
+            PlayerX Name:
+            <input
+              placeholder=" Default PlayerX"
+              type="text"
+              name="playerX"
+              id="playerX"
+            />
+          </label>
 
+          <label class="lForPO" for="playerO">
+            PlayerO Name:
+            <input
+              placeholder=" Default PlayerO"
+              type="text"
+              name="playerO"
+              id="playerO"
+            />
+          </label>
+        </div>
+
+        <div class="gamebtns">
+          <button
+            disabled
+            class="PVC"
+            title="The future will be Available soon"
+          >
+            Play with AI
+          </button>
           <button type="submit" class="gameStartBtn">Game Start</button>
         </div>
       </div>
     </div>
+    <!-- ==================== End Modal ==================== -->
+
+    <!-- ==================== Winner Modal ==================== -->
+    <div class="winnerContainer">
+      <div class="winnerModal">
+        <h2 class="msg"><span class="WinPName"></span> win the game!</h2>
+        <button class="playAgainBtn">Play Again</button>
+      </div>
+    </div>
+    <!-- ==================== End Winner Modal ==================== -->
 
     <script src="app.js"></script>
   </body>
