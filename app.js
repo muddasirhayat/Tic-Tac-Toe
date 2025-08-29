@@ -79,10 +79,12 @@ const checkedWinner = () => {
       }
 
       winnerMsg.style.display = "flex";
-      winPName.innerText = winnerName + " ";
-      setTimeout(function() {
+      winPName.innerText = winnerName;
+      drawMessage.innerText = winnerName + " win the game!";
+      setTimeout(function () {
         winnerMsg.classList.add("show");
       }, 10);
+      return;
     }
   }
 
@@ -98,8 +100,9 @@ if (!winnerFound) {
     if (allFilled) {
       mainPage.style.display = "none";
       winnerMsg.style.display = "flex";
-      drawMessage.innerText = "It's a Draw! ";
-      setTimeout(function() {
+      winPName.innerText = "";
+      drawMessage.innerText = "It's a Draw!";
+      setTimeout(function () {
         winnerMsg.classList.add("show");
       }, 10);
     }
@@ -111,10 +114,14 @@ playAgainBtn.addEventListener("click", () => {
   winnerMsg.classList.remove("show");
   setTimeout(() => (winnerMsg.style.display = "none"), 300);
   mainPage.style.display = "block";
+  winPName.innerText = "";
+  drawMessage.innerText = "";
   boxes.forEach((box) => {
     box.innerText = "";
     box.disabled = false;
+    turnX = true;
   });
+  
 });
 
 // ==================== Reset Game ====================
@@ -123,6 +130,8 @@ resetBtn.addEventListener("click", () => {
     box.innerText = "";
     box.disabled = false;
   });
+  drawMessage.innerText = "";
+  winPName.innerText = "";
   turnX = true;
 });
 
