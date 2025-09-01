@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ==================== Main Game Section ==================== -->
+    <main class="main">
+      <h1 class="gameTitle">Tic Tac Toe</h1>
+      <h2 class="turnCalculator">Player<span id="turn"> X </span>Turn</h2>
+      <div class="container">
+        <div class="btns">
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+        </div>
+      </div>
+
+      <div class="gameRBtns">
+        <button class="resetBtn">Reset Game</button>
+        <button class="restartBtn">Restart Game</button>
+      </div>
+    </main>
+    <!-- ==================== End Main Game Section ==================== -->
+
+    <!-- ==================== Start Modal ==================== -->
+    <div class="startContainer">
+      <div class="startModal">
+        <h2 class="welcomeMsg">Welcome to the MH Tic Tac Toe Game!</h2>
+        <div class="playerInputs">
+          <label class="lForPX" for="playerX">
+            <input
+              placeholder="Player X"
+              type="text"
+              name="playerX"
+              id="playerX"
+            />
+          </label>
+
+          <label class="lForPO" for="playerO">
+            <input
+              placeholder="Player O"
+              type="text"
+              name="playerO"
+              id="playerO"
+            />
+          </label>
+        </div>
+
+        <div class="gamebtns">
+          <button class="PVC" title="This is the new feature">
+            Play with AI
+          </button>
+          <button type="submit" class="gameStartBtn">Game Start</button>
+        </div>
+      </div>
+    </div>
+    <!-- ==================== End Modal ==================== -->
+
+    <!-- ==================== Winner Modal ==================== -->
+    <div class="winnerContainer">
+      <div class="winnerModal">
+        <h2 class="msg"><span class="WinPName">X</span> win the game!</h2>
+        <button class="playAgainBtn">
+          Play Again
+          <img src="./assests/Refresh.png" alt="Retry" class="replayBtn" />
+        </button>
+      </div>
+    </div>
+    <!-- ==================== End Winner Modal ==================== -->
+
+    <script src="app.js"></script>
+  </body>
+</html>
